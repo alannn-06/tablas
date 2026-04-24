@@ -1,0 +1,143 @@
+/* --- Reseteo y Configuración Base --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #ffe79a 0%, #fae9c4 100%);
+    font-family: 'Quicksand', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center; /* Centrado horizontal */
+    align-items: center;     /* Centrado vertical */
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+/* --- Contenedor Principal --- */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+/* --- Botón ¡PROBAR! --- */
+.btn-probar {
+    font-family: 'Fredoka One', cursive;
+    padding: 15px 40px;
+    font-size: 1.4rem;
+    color: white;
+    background: #ff4757;
+    border: 4px solid #ffffff;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 6px 0 #b33939;
+    margin-bottom: 20px;
+    transition: all 0.1s ease;
+    animation: pulse 2s infinite;
+}
+
+.btn-probar:active {
+    box-shadow: 0 2px 0 #b33939;
+    transform: translateY(4px);
+}
+
+/* --- Título con Brillos --- */
+.titulo-animado {
+    font-family: 'Fredoka One', cursive;
+    font-size: 2.8rem;
+    color: #ffffff;
+    text-shadow: 4px 4px 0px #ff6b81;
+    margin-bottom: 25px;
+    text-align: center;
+    animation: float 3s ease-in-out infinite;
+}
+
+/* --- Rectángulo de la Tabla --- */
+.card-infantil {
+    background: white;
+    padding: 25px;
+    border-radius: 30px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    width: 100%;
+    border: 8px solid #7bed9f;
+}
+
+/* --- Estilo de la Tabla --- */
+.tabla-divertida {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+
+.tabla-divertida th {
+    font-family: 'Fredoka One', cursive;
+    color: #2f3542;
+    font-size: 1.2rem;
+    padding-bottom: 10px;
+}
+
+.tabla-divertida td {
+    background-color: #f1f2f6;
+    padding: 12px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #57606f;
+    text-align: center;
+}
+
+/* Bordes redondeados en las filas */
+.tabla-divertida td:first-child { border-radius: 20px 0 0 20px; }
+.tabla-divertida td:last-child { border-radius: 0 20px 20px 0; }
+
+/* Burbujas de Resultado */
+.badge {
+    background: #70a1ff;
+    color: white;
+    padding: 5px 20px;
+    border-radius: 30px;
+    display: inline-block;
+    box-shadow: 0 4px 0 #4a69bd;
+}
+
+/* --- Animaciones Keyframes --- */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+/* --- Ajustes para Celulares --- */
+@media (max-width: 480px) {
+    .titulo-animado { font-size: 2rem; }
+    .btn-probar { font-size: 1.1rem; padding: 10px 30px; }
+    .tabla-divertida td { font-size: 1.1rem; padding: 10px; }
+}
+
+.creditos {
+    margin-top: 20px; /* Separa el texto del rectángulo */
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #000000; 
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    padding-bottom: 20px; /* Espacio extra al final de la página */
+}
